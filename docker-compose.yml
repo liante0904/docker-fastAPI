@@ -12,8 +12,9 @@ services:
     environment:
       - TZ=Asia/Seoul
     networks:
-      - nginx_network
+      - flask_network
 
 networks:
-  nginx_network:
-    external: true  # 외부 네트워크 설정
+  flask_network:
+    external: true  # 외부 네트워크 재사용
+    name: docker-flask_flask
