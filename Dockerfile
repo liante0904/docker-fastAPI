@@ -13,7 +13,7 @@ WORKDIR /app
 
 # FastAPI 설치
 COPY ./app /app
-RUN pip install fastapi uvicorn
+RUN pip install fastapi uvicorn httpx
 
 EXPOSE 8000
 
