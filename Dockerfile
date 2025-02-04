@@ -11,9 +11,11 @@ ENV TZ=Asia/Seoul
 # 작업 디렉터리 설정
 WORKDIR /app
 
-# FastAPI 설치
+# 소스 코드 및 requirements.txt 복사
 COPY ./app /app
-RUN pip install fastapi uvicorn httpx
+
+# 의존성 설치 (requirements.txt가 있는 경우)
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8000
 
